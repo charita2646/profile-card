@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="card">
+    <img src="C:\Users\Charita\OneDrive\Dokumente\profile.jpg" alt="profile" class="profile" />
+    <h2>charita</h2>
+    <p class="role">Full Stack Developer</p>
+    <p class="email">charita2646@gamil.com</p>
+
+    <button onclick="toggleMore()" id="toggleBtn">Show More</button>
+
+    <div class="info" id="moreInfo" style="display: none;">
+      <p><i class="fas fa-map-marker-alt"></i> Bhimavaram, Andhra Pradesh</p>
+      <p><i class="fas fa-briefcase"></i> Skills: HTML, CSS, JavaScript, Java Programming</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMore() {
+      const info = document.getElementById("moreInfo");
+      const btn = document.getElementById("toggleBtn");
+
+      if (info.style.display === "none") {
+        info.style.display = "block";
+        btn.textContent = "Show Less";
+      } else {
+        info.style.display = "none";
+        btn.textContent = "Show More";
+      }
+    }
+  </script>
+</body>
+</html>
